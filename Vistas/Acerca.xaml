@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cchuquitarcoExamen.Vistas.Acerca"
+             Title="Acerca">
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <Label Text="Acerca de"
+               FontSize="Title"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Estudiante:"
+                   TextColor="Aquamarine"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+
+            <Label Text="Cristian Chuquitarco"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" />
+
+            <Label Text="Curso:"
+                   TextColor="Aquamarine"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+
+            <Label Text="7mo A"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" />
+
+            <Label Text="Carrera:"
+                   TextColor="Aquamarine"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+
+            <Label Text="Ingeniería Informática"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" />
+
+        </Grid>
+
+        <Label Text="2024"
+               FontSize="Subtitle"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

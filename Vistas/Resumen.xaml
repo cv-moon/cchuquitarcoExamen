@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cchuquitarcoExamen.Vistas.Resumen"
+             Title="Resumen">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label x:Name="lblUsuario"
+               TextColor="#0487D9"
+               HorizontalTextAlignment="End" />
+
+            <Label Text="Resumen"
+               TextColor="Blue"
+               FontSize="22"
+               HorizontalTextAlignment="Center" />
+
+            <Frame BorderColor="#0487D9" BackgroundColor="Transparent">
+                <Grid RowSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nombre:"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           VerticalTextAlignment="Center" />
+                    
+                    <Entry x:Name="txtNombre"
+                           IsReadOnly="True"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           Placeholder="Nombre" />
+                    
+                    <Label Text="Apellido:"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           VerticalTextAlignment="Center" />
+                    
+                    <Entry x:Name="txtApellido"
+                           IsReadOnly="True"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           Placeholder="Apellido" />
+                        
+                    <Label Text="Edad"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           VerticalTextAlignment="Center" />
+
+                    <Entry x:Name="txtEdad"
+                           IsReadOnly="True"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           Placeholder="Edad"
+                           Keyboard="Numeric" />
+
+                    <Label Text="Fecha:"
+                           VerticalTextAlignment="Center"
+                           Grid.Row="3"
+                           Grid.Column="0" />
+
+                    <DatePicker x:Name="dpFecha"
+                            Format="dd/MM/yyyy"
+                            IsEnabled="False"
+                            Grid.Row="3"
+                            Grid.Column="1" />
+
+                    <Label Text="Ciudad:"
+                           Grid.Row="4"
+                           Grid.Column="0"
+                           VerticalTextAlignment="Center" />
+
+                    <Picker x:Name="pkCiudad"
+                            IsEnabled="False"
+                            Grid.Row="4"
+                            Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Ambato</x:String>
+                            <x:String>Cuenca</x:String>
+                            <x:String>Guayaquil</x:String>
+                            <x:String>Ibarra</x:String>
+                            <x:String>Quito</x:String>
+                        </Picker.Items>
+                    </Picker>
+                        
+                    <Label Text="País:"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       VerticalTextAlignment="Center" />
+
+                    <Picker x:Name="pkPais"
+                            IsEnabled="False"
+                        Grid.Row="5"
+                        Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Bolivia</x:String>
+                            <x:String>Chile</x:String>
+                            <x:String>Colombia</x:String>
+                            <x:String>Ecuador</x:String>
+                            <x:String>Perú</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Monto Inicial:"
+                           Grid.Row="6"
+                           Grid.Column="0"
+                           VerticalTextAlignment="Center" />
+
+                    <Entry x:Name="txtMontoInicial"
+                           IsReadOnly="True"
+                           Grid.Row="6"
+                           Grid.Column="1"
+                           Placeholder="0"
+                           Keyboard="Numeric" />
+
+                    <Label Text="Pago Mensual:"
+                           Grid.Row="7"
+                           Grid.Column="0"
+                           VerticalTextAlignment="Center" />
+
+                    <Entry x:Name="txtPagoMensual"
+                           IsReadOnly="True"
+                           Grid.Row="7"
+                           Grid.Column="1"
+                           Placeholder="0"
+                           Keyboard="Numeric" />
+                    
+                    <Label Text="P. TOTAL:"
+                           Grid.Row="8"
+                           Grid.Column="0"
+                           VerticalTextAlignment="Center" />
+
+                    <Entry x:Name="txtPagoTotal"
+                           IsReadOnly="True"
+                           Grid.Row="8"
+                           Grid.Column="1"
+                           Placeholder="0"
+                           Keyboard="Numeric" />
+
+                </Grid>
+            </Frame>
+
+            <Button x:Name="btnCerrar"
+                    Text="Cerrar Sesión"
+                    Clicked="btnCerrar_Clicked"
+                    BackgroundColor="PaleVioletRed"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
